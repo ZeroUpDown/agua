@@ -1,0 +1,369 @@
+
+/* ==================================================
+   ÁGUA LIMPA — FUTURO SUSTENTÁVEL
+   DESIGN MODERNO | HTML + CSS
+================================================== */
+
+/* 1. RESET E CONFIGURAÇÕES */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --navy: #061b32;
+    --blue-dark: #082d4b;
+    --blue: #087eaa;
+    --cyan: #26c6da;
+    --aqua: #75e5e8;
+    --green: #36c99a;
+    --white: #ffffff;
+    --background: #f3f8fc;
+    --text: #263e52;
+    --muted: #71869a;
+    --shadow: 0 15px 45px rgba(6, 45, 75, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.8;
+    overflow-x: hidden;
+
+     user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+     
+}
+
+
+/* 2. CABEÇALHO */
+
+header {
+    position: relative;
+    overflow: hidden;
+    padding: 85px 8%;
+    text-align: center;
+    color: white;
+
+    background:
+        radial-gradient(circle at 15% 20%,
+        rgba(38, 198, 218, 0.25), transparent 35%),
+        radial-gradient(circle at 85% 80%,
+        rgba(54, 201, 154, 0.2), transparent 35%),
+        linear-gradient(135deg, #061b32, #07577e, #087eaa);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+    top: -180px;
+    right: -80px;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 50%;
+    bottom: -150px;
+    left: -60px;
+}
+
+header h1 {
+    position: relative;
+    z-index: 1;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(38px, 6vw, 68px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+header p {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin: auto;
+    font-size: 18px;
+    color: #d3f4ff;
+    font-weight: 400;
+}
+
+
+/* 3. MENU */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    padding: 18px 5%;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(8,126,170,0.08);
+    box-shadow: 0 5px 25px rgba(6,45,75,0.05);
+}
+
+nav a {
+    text-decoration: none;
+    color: #34546c;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: #e3f7fb;
+    color: #087eaa;
+    transform: translateY(-2px);
+}
+
+
+/* 4. CONTEÚDO PRINCIPAL */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 65px auto;
+}
+
+
+/* 5. SEÇÕES */
+
+section {
+    position: relative;
+    background: white;
+    padding: clamp(25px, 5vw, 55px);
+    margin-bottom: 38px;
+
+    border: 1px solid rgba(8,126,170,0.07);
+    border-radius: 22px;
+
+    box-shadow: var(--shadow);
+
+    scroll-margin-top: 110px;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 55px rgba(6,45,75,0.12);
+}
+
+section h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 700;
+    color: var(--blue-dark);
+
+    line-height: 1.3;
+    margin-bottom: 25px;
+
+    border-left: 5px solid var(--cyan);
+    padding-left: 18px;
+}
+
+section p {
+    color: #60768a;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+
+/* 6. IMAGENS */
+
+section img {
+    display: block;
+    width: 700px;
+    height: auto;
+    max-height: none;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+    margin: 25px 0;
+
+    box-shadow: 0 10px 30px rgba(6,45,75,0.10);
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+section img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 40px rgba(6,45,75,0.16);
+}
+
+
+/* 7. LISTAS */
+
+section ul,
+section ol {
+    padding-left: 28px;
+    margin: 20px 0;
+}
+
+section li {
+    padding: 8px 0 8px 5px;
+    color: #526d80;
+}
+
+section li::marker {
+    color: var(--blue);
+    font-weight: 800;
+}
+
+
+/* 8. LINKS */
+
+section a {
+    color: #087eaa;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #0bb6bd;
+    text-decoration: underline;
+}
+
+
+/* 9. RODAPÉ */
+
+footer {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 90% 20%,
+        rgba(38,198,218,0.14), transparent 30%),
+        linear-gradient(135deg, #061b32, #073c60);
+
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+footer p {
+    color: #b9dce9;
+    font-size: 14px;
+    margin: 7px 0;
+}
+
+
+/* 10. SELEÇÃO DE TEXTO */
+
+::selection {
+    background: #26c6da;
+    color: #061b32;
+}
+
+
+/* 11. ROLAGEM */
+
+html {
+    scroll-padding-top: 100px;
+}
+
+
+/* 12. RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 65px 20px;
+    }
+
+    header h1 {
+        letter-spacing: -1px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    nav {
+        gap: 5px;
+        padding: 12px 8px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    main {
+        width: 93%;
+        margin: 30px auto;
+    }
+
+    section {
+        padding: 25px 20px;
+        margin-bottom: 24px;
+        border-radius: 17px;
+    }
+
+    section:hover {
+        transform: none;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 15px;
+    }
+
+    section img {
+        border-radius: 12px;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+}
+
+
+/* 13. ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+
+}
